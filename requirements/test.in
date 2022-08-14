@@ -1,0 +1,9 @@
+-r ./base.in
+
+pytest-django
+factory-boy
+pytest-cov
+flake8
+codecov
+requests-mock
+freezegun

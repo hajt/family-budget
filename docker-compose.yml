@@ -1,0 +1,53 @@
+version: "3.5"
+
+x-build-local: &build-local
+  build:
+    context: .
+    dockerfile: ./docker/local/django/Dockerfile
+
+x-db-environment: &db-environment
+  POSTGRES_DB: postgres
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
+
+x-app-environment: &app-environment
+  <<: *db-environment
+  DJANGO_SETTINGS_MODULE: config.settings.local
+  DJANGO_SECRET_KEY: not_so_secret
+  REDIS_URL: redis://redis:6379/0
+
+services:
+  app:
+    <<: *build-local
+    environment:
+      <<: *app-environment
+      PORT: 8000
+      HOST: 0.0.0.0
+      DJANGO_DEBUG: "True"
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+      - celery
+      - redis
+    command: /start.sh
+  db:
+    image: postgres
+    environment:
+      <<: *db-environment
+  redis:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+  celery:
+    <<: *build-local
+    environment:
+      <<: *app-environment
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - .:/app
+    command: celery -A config worker -l info

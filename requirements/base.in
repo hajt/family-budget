@@ -1,0 +1,9 @@
+psycopg2
+django==3.2.15
+django-environ
+django-cors-headers
+djangorestframework
+django-filter
+drf-yasg
+redis
+celery
