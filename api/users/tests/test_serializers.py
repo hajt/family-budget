@@ -1,6 +1,6 @@
 import pytest
 
-from ..serializers import UserSerializer
+from ..serializers import UserDetailSerializer, UserSerializer
 from .factories import UserFactory
 
 
@@ -8,6 +8,16 @@ from .factories import UserFactory
 def test_user_deserialization():
     user = UserFactory()
     serializer = UserSerializer(user)
+    assert serializer.data["id"] == str(user.id)
+    assert serializer.data["username"] == user.username
+    assert serializer.data["first_name"] == user.first_name
+    assert serializer.data["last_name"] == user.last_name
+
+
+@pytest.mark.django_db
+def test_user_detail_deserialization():
+    user = UserFactory()
+    serializer = UserDetailSerializer(user)
     assert serializer.data["id"] == str(user.id)
     assert serializer.data["username"] == user.username
     assert serializer.data["email"] == user.email

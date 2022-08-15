@@ -13,7 +13,13 @@ def test_user_name():
 @pytest.mark.django_db
 def test_user_repr():
     user = UserFactory(first_name="Jan", last_name="Kowalski")
-    assert user.__repr__() == f"<User({user.username})>"
+    assert user.__repr__() == f"<{User.__name__}({user.username})>"
+
+
+@pytest.mark.django_db
+def test_user_str():
+    user = UserFactory(first_name="Jan", last_name="Kowalski")
+    assert user.__str__() == f"{user.name} ({user.username})"
 
 
 @pytest.mark.django_db
