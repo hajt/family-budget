@@ -14,6 +14,10 @@ shell:
 superuser:
 	docker-compose run --rm app python manage.py createsuperuser
 
+# usage - `make app name=NAME`
+app:
+	docker-compose run --rm app python manage.py startapp $(name)
+
 # usage - `make migrations app=APP`
 migrations:
 	docker-compose run --rm app python manage.py makemigrations $(app)
@@ -29,12 +33,10 @@ reqs:
 	pip-compile requirements/base.in
 	pip-compile requirements/test.in
 	pip-compile requirements/local.in
-	pip-compile requirements/production.in
 	docker-compose build
 
 reqs_upgrade:
 	pip-compile --upgrade requirements/base.in
 	pip-compile --upgrade requirements/test.in
 	pip-compile --upgrade requirements/local.in
-	pip-compile --upgrade requirements/production.in
 	docker-compose build
