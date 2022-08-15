@@ -9,7 +9,7 @@ class Currency(models.TextChoices):
 
 
 class Wallet(CommonModel):
-    name = models.CharField(max_length=30, unique=True)
+    name = models.CharField(max_length=30)
     owner = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="own_wallets"
     )
@@ -19,6 +19,11 @@ class Wallet(CommonModel):
     currency = models.CharField(
         max_length=15, choices=Currency.choices, default=Currency.PLN
     )
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=["name", "owner"], name="unique_name_owner")
+        ]
 
     def get_participants_display(self):
         return ", ".join([str(participant) for participant in self.participants.all()])

@@ -13,3 +13,11 @@ class WalletAdmin(admin.ModelAdmin):
     search_fields = ("name", "owner__first_name", "owner__last_name", "owner__username")
     ordering = ("name",)
     readonly_fields = ("created_at", "updated_at")
+
+    def get_queryset(self, request):
+        return (
+            super()
+            .get_queryset(request)
+            .select_related("owner")
+            .prefetch_related("participants")
+        )
