@@ -11,9 +11,7 @@ class UserAdmin(admin.ModelAdmin):
         "first_name",
         "last_name",
         "is_superuser",
-        "is_staff",
-        "created_at",
-        "updated_at",
+        "date_joined",
     )
     search_fields = ("id", "email", "username", "first_name", "last_name")
     ordering = ("username", "email")

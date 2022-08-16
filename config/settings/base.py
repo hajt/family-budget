@@ -60,7 +60,7 @@ THIRD_PARTY_APPS = [
     "celery",
 ]
 
-LOCAL_APPS = ["api.users", "api.wallets"]
+LOCAL_APPS = ["api.users", "api.wallets", "api.transactions"]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
