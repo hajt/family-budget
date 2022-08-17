@@ -24,6 +24,7 @@ from .schema import schema_view
 api_urls = [
     path("", include(("api.users.urls", "users"), namespace="users")),
     path("", include(("api.wallets.urls", "wallets"))),
+    path("", include(("api.transactions.urls", "transactions"))),
 ]
 
 
