@@ -1,3 +1,5 @@
+from django.db import models
+
 from rest_framework import serializers
 
 from .models import Category, Transaction
@@ -28,9 +30,18 @@ class TransactionListSerializer(serializers.ModelSerializer):
 
 class TransactionGroupedSerializer(serializers.Serializer):
     def to_representation(self, data):
+
         return {
             category[0]: TransactionListSerializer(
-                instance=data.filter(category=category[0]), many=True
+                instance=self._filter_by_category(data, category[0]), many=True
             ).data
             for category in Category.choices
         }
+
+    def _filter_by_category(self, data, category):
+        iterable = []
+        if isinstance(data, Transaction):
+            iterable = [data] if data.category == category else []
+        elif isinstance(data, models.QuerySet):
+            iterable = data.filter(category=category)
+        return iterable
