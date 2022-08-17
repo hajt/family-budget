@@ -28,6 +28,24 @@ def test_wallet_get_participants_display():
 
 
 @pytest.mark.django_db
+def test_wallet_income():
+    wallet = WalletFactory()
+    assert wallet.income == "0.00"
+
+
+@pytest.mark.django_db
+def test_wallet_expenses():
+    wallet = WalletFactory()
+    assert wallet.expenses == "-0.00"
+
+
+@pytest.mark.django_db
+def test_wallet_balance():
+    wallet = WalletFactory()
+    assert wallet.balance == "0.00"
+
+
+@pytest.mark.django_db
 def test_wallet_unique_constrain():
     owner = UserFactory()
     WalletFactory(name="test_wallet", owner=owner)

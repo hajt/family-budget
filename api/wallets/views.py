@@ -76,7 +76,7 @@ class WalletViewSet(ModelViewSet):
         method="get", responses={HTTP_200_OK: TransactionGroupedSerializer()}
     )  # FIXME: Define custom schema for TransactionGroupedSerializer
     @action(methods=["get", "post"], detail=True, url_path="expenses")
-    def expenses(self, request):
+    def expenses(self, request, *args, **kwargs):
         if self.request.method == "POST":
             serializer = self._create_transaction(request)
             return Response(serializer.data, status=HTTP_201_CREATED)
@@ -97,7 +97,7 @@ class WalletViewSet(ModelViewSet):
         method="get", responses={HTTP_200_OK: TransactionGroupedSerializer()}
     )  # FIXME: Define custom schema for TransactionGroupedSerializer
     @action(methods=["get", "post"], detail=True, url_path="income")
-    def income(self, request):
+    def income(self, request, *args, **kwargs):
         if self.request.method == "POST":
             serializer = self._create_transaction(request, is_expense=False)
             return Response(serializer.data, status=HTTP_201_CREATED)

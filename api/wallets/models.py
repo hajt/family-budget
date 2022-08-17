@@ -32,9 +32,9 @@ class WalletManager(models.Manager):
             super()
             .get_queryset()
             .annotate(
-                expenses=Coalesce(Subquery(expenses_subquery), 0),
-                income=Coalesce(Subquery(income_subquery), 0),
-                balance=F("income") - F("expenses"),
+                _expenses=Coalesce(Subquery(expenses_subquery), 0),
+                _income=Coalesce(Subquery(income_subquery), 0),
+                _balance=F("_income") - F("_expenses"),
             )
         )
 
@@ -62,6 +62,21 @@ class Wallet(CommonModel):
         return ", ".join([str(participant) for participant in self.participants.all()])
 
     get_participants_display.short_description = "Shared with"
+
+    @property
+    def income(self):
+        income = self._income if hasattr(self, "_income") else 0
+        return f"{income/100:.2f}"
+
+    @property
+    def expenses(self):
+        expenses = self._expenses if hasattr(self, "_expenses") else 0
+        return f"-{expenses/100:.2f}"
+
+    @property
+    def balance(self):
+        balance = self._balance if hasattr(self, "_balance") else 0
+        return f"{balance/100:.2f}"
 
     def save(self, *args, **kwargs):
         self.full_clean()
