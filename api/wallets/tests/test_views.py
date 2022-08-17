@@ -32,7 +32,7 @@ def test_wallet_view_get_list_wallets(authenticated_api_client):
     )
 
     response = authenticated_api_client.get(reverse("wallets:wallets-list"))
-    response_data = json.dumps(response.data)
+    response_data = json.dumps(response.data["results"])
 
     assert response.status_code == 200
     assert response_data == expected_response
@@ -43,7 +43,7 @@ def test_wallet_view_get_list_no_wallets(authenticated_api_client):
     response = authenticated_api_client.get(reverse("wallets:wallets-list"))
 
     assert response.status_code == 200
-    assert response.data == []
+    assert response.data["results"] == []
 
 
 @pytest.mark.django_db
@@ -53,7 +53,7 @@ def test_wallet_view_get_list_no_owner_wallet(authenticated_api_client):
     response = authenticated_api_client.get(reverse("wallets:wallets-list"))
 
     assert response.status_code == 200
-    assert response.data == []
+    assert response.data["results"] == []
 
 
 @pytest.mark.django_db
@@ -74,7 +74,7 @@ def test_wallet_view_get_shared_wallets(authenticated_api_client):
     )
 
     response = authenticated_api_client.get(reverse("wallets:wallets-shared"))
-    response_data = json.dumps(response.data)
+    response_data = json.dumps(response.data["results"])
 
     assert response.status_code == 200
     assert response_data == expected_response
@@ -87,7 +87,7 @@ def test_wallet_view_get_shared_wallets_no_participant(authenticated_api_client)
     response = authenticated_api_client.get(reverse("wallets:wallets-shared"))
 
     assert response.status_code == 200
-    assert response.data == []
+    assert response.data["results"] == []
 
 
 @pytest.mark.django_db
