@@ -3,8 +3,13 @@ import json
 import pytest
 
 from django.urls import reverse
+from django.utils.timezone import now
 
+from api.transactions.models import Category, Transaction
+from api.transactions.serializers import TransactionListSerializer
+from api.transactions.tests.factories import TransactionFactory
 from api.users.tests.factories import UserFactory
+from api.wallets.exceptions import NotOwnerError
 from ..models import Currency, Wallet
 from .factories import WalletFactory
 
@@ -233,3 +238,229 @@ def test_wallet_view_delete_wallet_participant(authenticated_api_client):
 
     assert response.status_code == 404
     assert Wallet.objects.count() == 1
+
+
+@pytest.mark.django_db
+def test_wallet_view_get_expenses_owner(authenticated_api_client):
+    owner = authenticated_api_client.user
+    wallet = WalletFactory(owner=owner)
+    transaction = TransactionFactory(wallet=wallet)
+    category = transaction.category
+
+    response = authenticated_api_client.get(
+        reverse("wallets:wallets-expenses", args=[wallet.id])
+    )
+
+    assert response.status_code == 200
+    assert (
+        response.data[category]
+        == TransactionListSerializer([transaction], many=True).data
+    )
+
+
+@pytest.mark.django_db
+def test_wallet_view_get_expenses_participant(authenticated_api_client):
+    participant = authenticated_api_client.user
+    wallet = WalletFactory(participants=[participant])
+    transaction = TransactionFactory(wallet=wallet)
+    category = transaction.category
+
+    response = authenticated_api_client.get(
+        reverse("wallets:wallets-expenses", args=[wallet.id])
+    )
+
+    assert response.status_code == 200
+    assert (
+        response.data[category]
+        == TransactionListSerializer([transaction], many=True).data
+    )
+
+
+@pytest.mark.django_db
+def test_wallet_view_get_expenses_no_owner_no_participant(authenticated_api_client):
+    transaction = TransactionFactory()
+
+    response = authenticated_api_client.get(
+        reverse("wallets:wallets-expenses", args=[transaction.wallet.id])
+    )
+
+    assert response.status_code == 404
+
+
+@pytest.mark.django_db
+def test_wallet_view_post_expenses_owner(authenticated_api_client):
+    owner = authenticated_api_client.user
+    wallet = WalletFactory(owner=owner)
+
+    data = {
+        "title": "test expense",
+        "category": Category.OTHER,
+        "currency": Currency.PLN,
+        "amount": 1000,
+    }
+
+    response = authenticated_api_client.post(
+        reverse("wallets:wallets-expenses", args=[wallet.id]), data=data
+    )
+
+    assert response.status_code == 201
+    assert response.data["title"] == "test expense"
+    assert response.data["category"] == Category.OTHER
+    assert response.data["currency"] == Currency.PLN
+    assert response.data["amount"] == 1000
+    assert response.data["date"] == str(now().date())
+    assert response.data["is_expense"] is True
+    assert response.data["wallet"] == wallet.id
+
+
+@pytest.mark.django_db
+def test_wallet_view_post_expenses_participant(authenticated_api_client):
+    participant = authenticated_api_client.user
+    wallet = WalletFactory(participants=[participant])
+
+    data = {
+        "title": "test expense",
+        "category": Category.OTHER,
+        "currency": Currency.PLN,
+        "amount": 1000,
+    }
+
+    response = authenticated_api_client.post(
+        reverse("wallets:wallets-expenses", args=[wallet.id]), data=data
+    )
+
+    assert response.status_code == 406
+    assert response.data["detail"] == NotOwnerError.DETAIL
+    assert Transaction.objects.count() == 0
+
+
+@pytest.mark.django_db
+def test_wallet_view_post_expenses_no_owner_no_participant(authenticated_api_client):
+    wallet = WalletFactory()
+
+    data = {
+        "title": "test expense",
+        "category": Category.OTHER,
+        "currency": Currency.PLN,
+        "amount": 1000,
+    }
+
+    response = authenticated_api_client.post(
+        reverse("wallets:wallets-expenses", args=[wallet.id]), data=data
+    )
+
+    assert response.status_code == 404
+    assert Transaction.objects.count() == 0
+
+
+@pytest.mark.django_db
+def test_wallet_view_get_income_owner(authenticated_api_client):
+    owner = authenticated_api_client.user
+    wallet = WalletFactory(owner=owner)
+    transaction = TransactionFactory(wallet=wallet, is_expense=False)
+    category = transaction.category
+
+    response = authenticated_api_client.get(
+        reverse("wallets:wallets-income", args=[wallet.id])
+    )
+
+    assert response.status_code == 200
+    assert (
+        response.data[category]
+        == TransactionListSerializer([transaction], many=True).data
+    )
+
+
+@pytest.mark.django_db
+def test_wallet_view_get_income_participant(authenticated_api_client):
+    participant = authenticated_api_client.user
+    wallet = WalletFactory(participants=[participant])
+    transaction = TransactionFactory(wallet=wallet, is_expense=False)
+    category = transaction.category
+
+    response = authenticated_api_client.get(
+        reverse("wallets:wallets-income", args=[wallet.id])
+    )
+
+    assert response.status_code == 200
+    assert (
+        response.data[category]
+        == TransactionListSerializer([transaction], many=True).data
+    )
+
+
+@pytest.mark.django_db
+def test_wallet_view_get_income_no_owner_no_participant(authenticated_api_client):
+    transaction = TransactionFactory()
+
+    response = authenticated_api_client.get(
+        reverse("wallets:wallets-income", args=[transaction.wallet.id])
+    )
+
+    assert response.status_code == 404
+
+
+@pytest.mark.django_db
+def test_wallet_view_post_income_owner(authenticated_api_client):
+    owner = authenticated_api_client.user
+    wallet = WalletFactory(owner=owner)
+
+    data = {
+        "title": "test expense",
+        "category": Category.OTHER,
+        "currency": Currency.PLN,
+        "amount": 1000,
+    }
+
+    response = authenticated_api_client.post(
+        reverse("wallets:wallets-income", args=[wallet.id]), data=data
+    )
+
+    assert response.status_code == 201
+    assert response.data["title"] == "test expense"
+    assert response.data["category"] == Category.OTHER
+    assert response.data["currency"] == Currency.PLN
+    assert response.data["amount"] == 1000
+    assert response.data["date"] == str(now().date())
+    assert response.data["is_expense"] is False
+    assert response.data["wallet"] == wallet.id
+
+
+@pytest.mark.django_db
+def test_wallet_view_post_income_participant(authenticated_api_client):
+    participant = authenticated_api_client.user
+    wallet = WalletFactory(participants=[participant])
+
+    data = {
+        "title": "test expense",
+        "category": Category.OTHER,
+        "currency": Currency.PLN,
+        "amount": 1000,
+    }
+
+    response = authenticated_api_client.post(
+        reverse("wallets:wallets-income", args=[wallet.id]), data=data
+    )
+
+    assert response.status_code == 406
+    assert response.data["detail"] == NotOwnerError.DETAIL
+    assert Transaction.objects.count() == 0
+
+
+@pytest.mark.django_db
+def test_wallet_view_post_income_no_owner_no_participant(authenticated_api_client):
+    wallet = WalletFactory()
+
+    data = {
+        "title": "test expense",
+        "category": Category.OTHER,
+        "currency": Currency.PLN,
+        "amount": 1000,
+    }
+
+    response = authenticated_api_client.post(
+        reverse("wallets:wallets-income", args=[wallet.id]), data=data
+    )
+
+    assert response.status_code == 404
+    assert Transaction.objects.count() == 0
