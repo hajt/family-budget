@@ -40,3 +40,13 @@ reqs_upgrade:
 	pip-compile --upgrade requirements/test.in
 	pip-compile --upgrade requirements/local.in
 	docker-compose build
+
+# usage - `make load_fixtures file=FILE`
+load_fixtures:
+	docker-compose run --rm app python manage.py loaddata $(file)
+
+# usage - `make dump_fixtures file=FILE`
+dump_fixtures:
+	docker-compose run --rm app python manage.py dumpdata --all --indent=2 > $(file)
+
+    

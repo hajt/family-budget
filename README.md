@@ -23,7 +23,8 @@ This is a REST API application which allows manage expenses and income for sever
 - there is required to create superuser  
   **Hint:** Type in your terminal, in the repository directory `make superuser`
 - superuser can create users
-- users are authenticated by the **Bearer** token
+- users can obtain authorization **Bearer** token by sending POST request on `/token` endpoint with `username` and `password` in body  
+  **Note:** In the repository they are included example data fixtures. It can be loaded via command `make load_fixtures file=fixtures.json`. Default admin credentials are `admin`/`admin`.
 
 ## Development:
 
@@ -32,7 +33,6 @@ This is a REST API application which allows manage expenses and income for sever
 
 ### Notes from author:
 
-- soon there will be available data fixtures to load and play with the application
 - right now, there is only possible to insert current expenses and income (not planned ones). There was an idea to add Planned Expenses feature, which allows to schedule future operations for certain day, and when this day will come, turn it into an expense. Entire process would be happened automatically with the Celery worker usage. Current setup is ready for this feature, Celery service is already included into the setup, just need to add another application and setup a periodic task
 - there are also some others possible future features ideas:
   - architecture is prepared for expanding budgets to different currencies. Right now, there is only supported "Polish złoty"

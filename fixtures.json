@@ -1,0 +1,1462 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2022-08-17T17:10:44.826Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 9,
+      "object_id": "f85b637b-d276-4089-a4fd-716b33540a95",
+      "object_repr": "Jan Kowalski (jankowalski)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2022-08-17T17:11:07.506Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 9,
+      "object_id": "c6ae8a55-046f-4f53-aba1-28caca658d16",
+      "object_repr": "Anna Nowak (annanowak)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2022-08-17T17:13:47.350Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 9,
+      "object_id": "63d3d6ce-8b00-4e9c-ae49-9d35fa59f20e",
+      "object_repr": "Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2022-08-17T17:16:31.677Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 10,
+      "object_id": "4ab05a3e-230f-4aab-8c31-0c4b4097f8f0",
+      "object_repr": "Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2022-08-17T17:17:10.975Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 10,
+      "object_id": "b4fb7a0e-a8e7-4e47-8d0b-827fc567c140",
+      "object_repr": "Skarpeta | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2022-08-17T17:18:09.396Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 10,
+      "object_id": "4ab05a3e-230f-4aab-8c31-0c4b4097f8f0",
+      "object_repr": "Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Participants\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2022-08-17T17:19:06.646Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 10,
+      "object_id": "1efbf93a-3b2e-4c51-8154-d07be7922f6c",
+      "object_repr": "Wakacje 2022 | Jan Kowalski (jankowalski)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2022-08-17T17:19:18.991Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 10,
+      "object_id": "972378a9-eb93-4950-8ce2-e2ab571c2098",
+      "object_repr": "Tuningi | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2022-08-17T17:20:43.806Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "62072270-219f-4e91-8515-971bcf4dbdc6",
+      "object_repr": "Całoroczne oszczędności = 10000.00 | Wakacje 2022 | Jan Kowalski (jankowalski)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2022-08-17T17:21:19.202Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "20244d7b-2bfe-458a-9325-a9a07701b6b7",
+      "object_repr": "Wypłata = -5000.00 | Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2022-08-17T17:21:30.733Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "20244d7b-2bfe-458a-9325-a9a07701b6b7",
+      "object_repr": "Wypłata = 5000.00 | Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is expense\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2022-08-17T17:22:21.350Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "2769e7d6-5cbe-4ae1-af7d-400d487953b9",
+      "object_repr": "Lepiej nie pytać = 2000.00 | Skarpeta | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2022-08-17T17:23:29.006Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "dce265e0-e534-4f7a-8421-f5a7c3bf1a16",
+      "object_repr": "To też tajemnica = 25000.00 | Tuningi | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2022-08-17T17:24:29.201Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "4c6c7ee9-4d9c-47ff-9845-7ce5baeab3d4",
+      "object_repr": "Pizza = -55.55 | Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2022-08-17T17:24:52.191Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "bc65028d-4d08-4976-b1a9-8129bfbd42c0",
+      "object_repr": "Napiwek dla kelnera = -0.15 | Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2022-08-17T17:25:20.201Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "5fa4a8db-b19f-4f2b-9e7c-9448a117241f",
+      "object_repr": "Nowe butki <3 = -1500.00 | Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2022-08-17T17:25:41.177Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "f253eede-7de6-4731-8b0e-3d428af607d4",
+      "object_repr": "Kino = -80.00 | Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2022-08-17T17:26:18.881Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "a875e59d-36a9-43cb-b178-8db928cf533d",
+      "object_repr": "Czynsz = -750.49 | Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2022-08-17T17:26:40.075Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "bc65028d-4d08-4976-b1a9-8129bfbd42c0",
+      "object_repr": "Napiwek dla kelnera = -15.00 | Oszczędności | Anna Nowak (annanowak)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Amount\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2022-08-17T17:27:22.246Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "846af83e-4b7d-4659-8553-a6490c9667c6",
+      "object_repr": "50 groszy leżące na chodniku = 0.50 | Skarpeta | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2022-08-17T17:28:14.010Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "d605f966-0b37-4667-b454-2ca8ea0e2c13",
+      "object_repr": "Bilety lotnicze = -2500.00 | Wakacje 2022 | Jan Kowalski (jankowalski)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2022-08-17T17:28:39.701Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "1017abab-43b0-439d-8925-89ed5f584116",
+      "object_repr": "Buty do chodzenia po wodzie = -99.99 | Wakacje 2022 | Jan Kowalski (jankowalski)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2022-08-17T17:29:33.808Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "f9c07a18-3507-4dc4-9fb5-d00696c022a6",
+      "object_repr": "Karnet na siłkę (do wakacji zdążę!) = -150.00 | Wakacje 2022 | Jan Kowalski (jankowalski)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2022-08-17T17:30:41.717Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "5c473733-b058-4985-8350-6613e0757322",
+      "object_repr": "Kurtka zimowa = -350.00 | Wakacje 2022 | Jan Kowalski (jankowalski)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2022-08-17T17:31:04.523Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "74e0ee08-d022-42e7-a95a-31a88243c95c",
+      "object_repr": "Nowa turbina = -3500.00 | Tuningi | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2022-08-17T17:31:15.376Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "2c411705-831f-4303-8284-555f7552a5c0",
+      "object_repr": "Felgi BBS = -12000.00 | Tuningi | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2022-08-17T17:31:58.683Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "41cc92a6-b723-4b6e-9d56-89def8dfec81",
+      "object_repr": "Serwis olejowy = -550.00 | Tuningi | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2022-08-17T17:32:09.258Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 10,
+      "object_id": "972378a9-eb93-4950-8ce2-e2ab571c2098",
+      "object_repr": "Samochód | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2022-08-17T17:33:16.535Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "4c4791f2-1a77-4173-9bc8-a286acdf82f5",
+      "object_repr": "To też tajemnica = -1000.00 | Samochód | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2022-08-17T17:33:45.746Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "4c4791f2-1a77-4173-9bc8-a286acdf82f5",
+      "object_repr": "To też tajemnica = 1000.00 | Samochód | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is expense\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2022-08-17T17:34:15.485Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "dce265e0-e534-4f7a-8421-f5a7c3bf1a16",
+      "object_repr": "Tajemnica = 25000.00 | Samochód | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Title\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2022-08-17T17:35:50.543Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "ac849f77-8969-4732-b3de-203b982ffd9c",
+      "object_repr": "Nocny targ = -95.00 | Skarpeta | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2022-08-17T17:36:05.185Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "025aa016-4f51-4e2a-a24a-be971910945f",
+      "object_repr": "Pasibus = -35.00 | Samochód | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2022-08-17T17:36:32.840Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "025aa016-4f51-4e2a-a24a-be971910945f",
+      "object_repr": "Pasibus = -35.00 | Skarpeta | Grzegorz Brzęczyszczykiewicz (brzyszy)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Wallet\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2022-08-17T17:37:25.774Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 8,
+      "object_id": "c6ae8a55-046f-4f53-aba1-28caca658d16",
+      "object_repr": "0ff99e19fa703967dcecea49f2bfa3fbfa57a55d",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2022-08-17T17:37:29.093Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 8,
+      "object_id": "63d3d6ce-8b00-4e9c-ae49-9d35fa59f20e",
+      "object_repr": "bbc5f916009f37112910ee6172ca251c78b74566",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2022-08-17T17:37:34.609Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 8,
+      "object_id": "f85b637b-d276-4089-a4fd-716b33540a95",
+      "object_repr": "1d7b6a66b0557b469676ea114ba5f266489dc43a",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2022-08-17T18:00:23.743Z",
+      "user": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+      "content_type": 11,
+      "object_id": "5c473733-b058-4985-8350-6613e0757322",
+      "object_repr": "Kurtka zimowa = -350.00 | Wakacje 2022 | Jan Kowalski (jankowalski)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add site",
+      "content_type": 6,
+      "codename": "add_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change site",
+      "content_type": 6,
+      "codename": "change_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete site",
+      "content_type": 6,
+      "codename": "delete_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view site",
+      "content_type": 6,
+      "codename": "view_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Token",
+      "content_type": 7,
+      "codename": "add_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Token",
+      "content_type": 7,
+      "codename": "change_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Token",
+      "content_type": 7,
+      "codename": "delete_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Token",
+      "content_type": 7,
+      "codename": "view_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add token",
+      "content_type": 8,
+      "codename": "add_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change token",
+      "content_type": 8,
+      "codename": "change_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete token",
+      "content_type": 8,
+      "codename": "delete_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view token",
+      "content_type": 8,
+      "codename": "view_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 9,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 9,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 9,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 9,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add wallet",
+      "content_type": 10,
+      "codename": "add_wallet"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change wallet",
+      "content_type": 10,
+      "codename": "change_wallet"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete wallet",
+      "content_type": 10,
+      "codename": "delete_wallet"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view wallet",
+      "content_type": 10,
+      "codename": "view_wallet"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add transaction",
+      "content_type": 11,
+      "codename": "add_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change transaction",
+      "content_type": 11,
+      "codename": "change_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete transaction",
+      "content_type": 11,
+      "codename": "delete_transaction"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view transaction",
+      "content_type": 11,
+      "codename": "view_transaction"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sites",
+      "model": "site"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "authtoken",
+      "model": "token"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "authtoken",
+      "model": "tokenproxy"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "users",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "wallets",
+      "model": "wallet"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "transactions",
+      "model": "transaction"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "05qoeilkym3qr3c3umyt8w5wi3wpfsnw",
+    "fields": {
+      "session_data": ".eJxVjjsOwjAQBe_iGlv-7S6hpOcM0dpekwBKpHwqxN1JpBRQv5nRe6uW16Vr11mmti_qooLjcq4JtLcgOvoImik1GjihFEpgfVGnXy1xfsqwu-XBw300eRyWqU9mR8yxzuY2FnldD_Yv0PHcbTah5ODQBqxCHhNXCBkjORcoWNxeEHlXcoxUUyPn7MA3NqKrDOI5q88X6_5AqA:1oOMYC:QKQH5ta8oEY1st3gkL26-08XItJ-fvkO8iJChAunPKE",
+      "expire_date": "2022-08-31T17:09:52.167Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "3lbxp6wj4kl9g9mq8vtau3df3x2dbinc",
+    "fields": {
+      "session_data": ".eJxVjjsOwjAQBe_iGlv-7S6hpOcM0dpekwBKpHwqxN1JpBRQv5nRe6uW16Vr11mmti_qooLjcq4JtLcgOvoImik1GjihFEpgfVGnXy1xfsqwu-XBw300eRyWqU9mR8yxzuY2FnldD_Yv0PHcbTah5ODQBqxCHhNXCBkjORcoWNxeEHlXcoxUUyPn7MA3NqKrDOI5q88X6_5AqA:1oONBw:2XpAL5QWTn4RxqKVyLEU7HkKosMK8YzzPkLpRZ1Qi5E",
+      "expire_date": "2022-08-31T17:50:56.098Z"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+      "domain": "example.com",
+      "name": "example.com"
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "0ff99e19fa703967dcecea49f2bfa3fbfa57a55d",
+    "fields": {
+      "user": "c6ae8a55-046f-4f53-aba1-28caca658d16",
+      "created": "2022-08-17T17:37:25.773Z"
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "1d7b6a66b0557b469676ea114ba5f266489dc43a",
+    "fields": {
+      "user": "f85b637b-d276-4089-a4fd-716b33540a95",
+      "created": "2022-08-17T17:37:34.608Z"
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "bbc5f916009f37112910ee6172ca251c78b74566",
+    "fields": {
+      "user": "63d3d6ce-8b00-4e9c-ae49-9d35fa59f20e",
+      "created": "2022-08-17T17:37:29.092Z"
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "31ad8fb5-205e-4245-a7b9-5ab6ed7b502d",
+    "fields": {
+      "password": "pbkdf2_sha256$260000$TGHkPFDqZUZkUwiOK23D82$j9nhha8lMw6JEOplvMamyuXpgBTKKc3D+xJOWy0gMeM=",
+      "last_login": "2022-08-17T17:50:56.090Z",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-08-17T17:09:43.087Z",
+      "created_at": "2022-08-17T17:09:43.389Z",
+      "updated_at": "2022-08-17T17:09:43.389Z",
+      "first_name": "Admin",
+      "last_name": "Adminowy",
+      "email": "admin@example.com",
+      "username": "admin",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "63d3d6ce-8b00-4e9c-ae49-9d35fa59f20e",
+    "fields": {
+      "password": "123454321",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-17T17:11:52Z",
+      "created_at": "2022-08-17T17:13:47.343Z",
+      "updated_at": "2022-08-17T17:13:47.343Z",
+      "first_name": "Grzegorz",
+      "last_name": "Brzęczyszczykiewicz",
+      "email": "brzyszy@example.com",
+      "username": "brzyszy",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "c6ae8a55-046f-4f53-aba1-28caca658d16",
+    "fields": {
+      "password": "123454321",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-17T17:10:44Z",
+      "created_at": "2022-08-17T17:11:07.499Z",
+      "updated_at": "2022-08-17T17:11:07.499Z",
+      "first_name": "Anna",
+      "last_name": "Nowak",
+      "email": "annanowak@example.com",
+      "username": "annanowak",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": "f85b637b-d276-4089-a4fd-716b33540a95",
+    "fields": {
+      "password": "123454321",
+      "last_login": null,
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-08-17T17:09:56Z",
+      "created_at": "2022-08-17T17:10:44.819Z",
+      "updated_at": "2022-08-17T17:10:44.819Z",
+      "first_name": "Jan",
+      "last_name": "Kowalski",
+      "email": "jankowalski@example.com",
+      "username": "jankowalski",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "wallets.wallet",
+    "pk": "1efbf93a-3b2e-4c51-8154-d07be7922f6c",
+    "fields": {
+      "created_at": "2022-08-17T17:19:06.639Z",
+      "updated_at": "2022-08-17T17:19:06.639Z",
+      "name": "Wakacje 2022",
+      "owner": "f85b637b-d276-4089-a4fd-716b33540a95",
+      "currency": "pln",
+      "participants": ["c6ae8a55-046f-4f53-aba1-28caca658d16"]
+    }
+  },
+  {
+    "model": "wallets.wallet",
+    "pk": "4ab05a3e-230f-4aab-8c31-0c4b4097f8f0",
+    "fields": {
+      "created_at": "2022-08-17T17:16:31.673Z",
+      "updated_at": "2022-08-17T17:18:09.392Z",
+      "name": "Oszczędności",
+      "owner": "c6ae8a55-046f-4f53-aba1-28caca658d16",
+      "currency": "pln",
+      "participants": [
+        "f85b637b-d276-4089-a4fd-716b33540a95",
+        "63d3d6ce-8b00-4e9c-ae49-9d35fa59f20e"
+      ]
+    }
+  },
+  {
+    "model": "wallets.wallet",
+    "pk": "972378a9-eb93-4950-8ce2-e2ab571c2098",
+    "fields": {
+      "created_at": "2022-08-17T17:19:18.987Z",
+      "updated_at": "2022-08-17T17:32:09.253Z",
+      "name": "Samochód",
+      "owner": "63d3d6ce-8b00-4e9c-ae49-9d35fa59f20e",
+      "currency": "pln",
+      "participants": []
+    }
+  },
+  {
+    "model": "wallets.wallet",
+    "pk": "b4fb7a0e-a8e7-4e47-8d0b-827fc567c140",
+    "fields": {
+      "created_at": "2022-08-17T17:17:10.970Z",
+      "updated_at": "2022-08-17T17:17:10.970Z",
+      "name": "Skarpeta",
+      "owner": "63d3d6ce-8b00-4e9c-ae49-9d35fa59f20e",
+      "currency": "pln",
+      "participants": [
+        "f85b637b-d276-4089-a4fd-716b33540a95",
+        "c6ae8a55-046f-4f53-aba1-28caca658d16"
+      ]
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "025aa016-4f51-4e2a-a24a-be971910945f",
+    "fields": {
+      "created_at": "2022-08-17T17:36:05.181Z",
+      "updated_at": "2022-08-17T17:36:32.838Z",
+      "title": "Pasibus",
+      "category": "food",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 3500,
+      "is_expense": true,
+      "wallet": "b4fb7a0e-a8e7-4e47-8d0b-827fc567c140"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "1017abab-43b0-439d-8925-89ed5f584116",
+    "fields": {
+      "created_at": "2022-08-17T17:28:39.699Z",
+      "updated_at": "2022-08-17T17:28:39.699Z",
+      "title": "Buty do chodzenia po wodzie",
+      "category": "clothes",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 9999,
+      "is_expense": true,
+      "wallet": "1efbf93a-3b2e-4c51-8154-d07be7922f6c"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "20244d7b-2bfe-458a-9325-a9a07701b6b7",
+    "fields": {
+      "created_at": "2022-08-17T17:21:19.198Z",
+      "updated_at": "2022-08-17T17:21:30.730Z",
+      "title": "Wypłata",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 500000,
+      "is_expense": false,
+      "wallet": "4ab05a3e-230f-4aab-8c31-0c4b4097f8f0"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "2769e7d6-5cbe-4ae1-af7d-400d487953b9",
+    "fields": {
+      "created_at": "2022-08-17T17:22:21.346Z",
+      "updated_at": "2022-08-17T17:22:21.346Z",
+      "title": "Lepiej nie pytać",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 200000,
+      "is_expense": false,
+      "wallet": "b4fb7a0e-a8e7-4e47-8d0b-827fc567c140"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "2c411705-831f-4303-8284-555f7552a5c0",
+    "fields": {
+      "created_at": "2022-08-17T17:31:15.373Z",
+      "updated_at": "2022-08-17T17:31:15.373Z",
+      "title": "Felgi BBS",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 1200000,
+      "is_expense": true,
+      "wallet": "972378a9-eb93-4950-8ce2-e2ab571c2098"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "41cc92a6-b723-4b6e-9d56-89def8dfec81",
+    "fields": {
+      "created_at": "2022-08-17T17:31:58.681Z",
+      "updated_at": "2022-08-17T17:31:58.681Z",
+      "title": "Serwis olejowy",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 55000,
+      "is_expense": true,
+      "wallet": "972378a9-eb93-4950-8ce2-e2ab571c2098"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "4c4791f2-1a77-4173-9bc8-a286acdf82f5",
+    "fields": {
+      "created_at": "2022-08-17T17:33:16.533Z",
+      "updated_at": "2022-08-17T17:33:45.742Z",
+      "title": "To też tajemnica",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 100000,
+      "is_expense": false,
+      "wallet": "972378a9-eb93-4950-8ce2-e2ab571c2098"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "4c6c7ee9-4d9c-47ff-9845-7ce5baeab3d4",
+    "fields": {
+      "created_at": "2022-08-17T17:24:29.197Z",
+      "updated_at": "2022-08-17T17:24:29.197Z",
+      "title": "Pizza",
+      "category": "food",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 5555,
+      "is_expense": true,
+      "wallet": "4ab05a3e-230f-4aab-8c31-0c4b4097f8f0"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "5c473733-b058-4985-8350-6613e0757322",
+    "fields": {
+      "created_at": "2022-08-17T17:30:41.714Z",
+      "updated_at": "2022-08-17T18:00:23.737Z",
+      "title": "Kurtka zimowa",
+      "category": "clothes",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 35000,
+      "is_expense": true,
+      "wallet": "1efbf93a-3b2e-4c51-8154-d07be7922f6c"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "5fa4a8db-b19f-4f2b-9e7c-9448a117241f",
+    "fields": {
+      "created_at": "2022-08-17T17:25:20.197Z",
+      "updated_at": "2022-08-17T17:25:20.197Z",
+      "title": "Nowe butki <3",
+      "category": "clothes",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 150000,
+      "is_expense": true,
+      "wallet": "4ab05a3e-230f-4aab-8c31-0c4b4097f8f0"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "62072270-219f-4e91-8515-971bcf4dbdc6",
+    "fields": {
+      "created_at": "2022-08-17T17:20:43.803Z",
+      "updated_at": "2022-08-17T17:20:43.803Z",
+      "title": "Całoroczne oszczędności",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 1000000,
+      "is_expense": false,
+      "wallet": "1efbf93a-3b2e-4c51-8154-d07be7922f6c"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "74e0ee08-d022-42e7-a95a-31a88243c95c",
+    "fields": {
+      "created_at": "2022-08-17T17:31:04.517Z",
+      "updated_at": "2022-08-17T17:31:04.517Z",
+      "title": "Nowa turbina",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 350000,
+      "is_expense": true,
+      "wallet": "972378a9-eb93-4950-8ce2-e2ab571c2098"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "846af83e-4b7d-4659-8553-a6490c9667c6",
+    "fields": {
+      "created_at": "2022-08-17T17:27:22.244Z",
+      "updated_at": "2022-08-17T17:27:22.244Z",
+      "title": "50 groszy leżące na chodniku",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 50,
+      "is_expense": false,
+      "wallet": "b4fb7a0e-a8e7-4e47-8d0b-827fc567c140"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "a875e59d-36a9-43cb-b178-8db928cf533d",
+    "fields": {
+      "created_at": "2022-08-17T17:26:18.879Z",
+      "updated_at": "2022-08-17T17:26:18.879Z",
+      "title": "Czynsz",
+      "category": "bills",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 75049,
+      "is_expense": true,
+      "wallet": "4ab05a3e-230f-4aab-8c31-0c4b4097f8f0"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "ac849f77-8969-4732-b3de-203b982ffd9c",
+    "fields": {
+      "created_at": "2022-08-17T17:35:50.541Z",
+      "updated_at": "2022-08-17T17:35:50.541Z",
+      "title": "Nocny targ",
+      "category": "entertainment",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 9500,
+      "is_expense": true,
+      "wallet": "b4fb7a0e-a8e7-4e47-8d0b-827fc567c140"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "bc65028d-4d08-4976-b1a9-8129bfbd42c0",
+    "fields": {
+      "created_at": "2022-08-17T17:24:52.187Z",
+      "updated_at": "2022-08-17T17:26:40.071Z",
+      "title": "Napiwek dla kelnera",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 1500,
+      "is_expense": true,
+      "wallet": "4ab05a3e-230f-4aab-8c31-0c4b4097f8f0"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "d605f966-0b37-4667-b454-2ca8ea0e2c13",
+    "fields": {
+      "created_at": "2022-08-17T17:28:14.006Z",
+      "updated_at": "2022-08-17T17:28:14.006Z",
+      "title": "Bilety lotnicze",
+      "category": "bills",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 250000,
+      "is_expense": true,
+      "wallet": "1efbf93a-3b2e-4c51-8154-d07be7922f6c"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "dce265e0-e534-4f7a-8421-f5a7c3bf1a16",
+    "fields": {
+      "created_at": "2022-08-17T17:23:29.003Z",
+      "updated_at": "2022-08-17T17:34:15.478Z",
+      "title": "Tajemnica",
+      "category": "other",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 2500000,
+      "is_expense": false,
+      "wallet": "972378a9-eb93-4950-8ce2-e2ab571c2098"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "f253eede-7de6-4731-8b0e-3d428af607d4",
+    "fields": {
+      "created_at": "2022-08-17T17:25:41.174Z",
+      "updated_at": "2022-08-17T17:25:41.174Z",
+      "title": "Kino",
+      "category": "entertainment",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 8000,
+      "is_expense": true,
+      "wallet": "4ab05a3e-230f-4aab-8c31-0c4b4097f8f0"
+    }
+  },
+  {
+    "model": "transactions.transaction",
+    "pk": "f9c07a18-3507-4dc4-9fb5-d00696c022a6",
+    "fields": {
+      "created_at": "2022-08-17T17:29:33.799Z",
+      "updated_at": "2022-08-17T17:29:33.799Z",
+      "title": "Karnet na siłkę (do wakacji zdążę!)",
+      "category": "entertainment",
+      "currency": "pln",
+      "date": "2022-08-17",
+      "amount": 15000,
+      "is_expense": true,
+      "wallet": "1efbf93a-3b2e-4c51-8154-d07be7922f6c"
+    }
+  }
+]
