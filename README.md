@@ -33,7 +33,6 @@ This is a REST API application which allows manage expenses and income for sever
 ### Notes from author:
 
 - soon there will be available data fixtures to load and play with the application
-- there are missing filtering and pagination -> Work in progress
 - right now, there is only possible to insert current expenses and income (not planned ones). There was an idea to add Planned Expenses feature, which allows to schedule future operations for certain day, and when this day will come, turn it into an expense. Entire process would be happened automatically with the Celery worker usage. Current setup is ready for this feature, Celery service is already included into the setup, just need to add another application and setup a periodic task
 - there are also some others possible future features ideas:
   - architecture is prepared for expanding budgets to different currencies. Right now, there is only supported "Polish złoty"

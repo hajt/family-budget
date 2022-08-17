@@ -1,3 +1,4 @@
+from django_filters.rest_framework import DjangoFilterBackend
 from drf_yasg.utils import swagger_auto_schema
 
 from django.db.models import Q
@@ -23,9 +24,6 @@ from .serializers import (
 )
 
 
-# TODO: Add filter
-
-
 class WalletPagination(PageNumberPagination):
     page_size = 10
 
@@ -35,6 +33,8 @@ class WalletViewSet(ModelViewSet):
     http_method_names = ["get", "post", "patch", "delete"]
     serializer_class = WalletUpdateSerializer
     pagination_class = WalletPagination
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ["currency", "name"]
 
     def get_queryset(self):
         if self.action == "shared":
