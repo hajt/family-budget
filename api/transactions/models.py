@@ -22,7 +22,7 @@ class Transaction(CommonModel):
         max_length=15, choices=Currency.choices, default=Currency.PLN
     )
     date = models.DateField(auto_now_add=True)
-    amount = models.PositiveSmallIntegerField(
+    amount = models.PositiveIntegerField(
         help_text="Amount in the smallest, integer currency parts (eg. cents)",
         validators=[MinValueValidator(1)],
     )
