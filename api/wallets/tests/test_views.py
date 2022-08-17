@@ -21,6 +21,7 @@ def test_wallet_view_get_list_wallets(authenticated_api_client):
                 "name": wallet.name,
                 "currency": wallet.currency,
                 "owner": str(wallet.owner),
+                "balance": wallet.balance,
             }
         ]
     )
@@ -62,6 +63,7 @@ def test_wallet_view_get_shared_wallets(authenticated_api_client):
                 "name": wallet.name,
                 "currency": wallet.currency,
                 "owner": str(wallet.owner),
+                "balance": wallet.balance,
             }
         ]
     )
@@ -93,6 +95,9 @@ def test_wallet_view_get_wallet_owner(authenticated_api_client):
         "name": wallet.name,
         "currency": wallet.currency,
         "owner": str(wallet.owner),
+        "balance": wallet.balance,
+        "income": wallet.income,
+        "expenses": wallet.expenses,
         "participants": [participant.id],
     }
 
@@ -114,6 +119,9 @@ def test_wallet_view_get_wallet_participant(authenticated_api_client):
         "name": wallet.name,
         "currency": wallet.currency,
         "owner": str(wallet.owner),
+        "balance": wallet.balance,
+        "income": wallet.income,
+        "expenses": wallet.expenses,
         "participants": [participant.id],
     }
 
