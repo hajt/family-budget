@@ -31,7 +31,6 @@ class WalletPagination(PageNumberPagination):
 class WalletViewSet(ModelViewSet):
     permission_classes = (IsAuthenticated,)
     http_method_names = ["get", "post", "patch", "delete"]
-    serializer_class = WalletUpdateSerializer
     pagination_class = WalletPagination
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ["currency", "name"]
@@ -64,11 +63,11 @@ class WalletViewSet(ModelViewSet):
         elif self.action == "retrieve":
             serializer = WalletDetailSerializer
         else:
-            serializer = self.serializer_class
+            serializer = WalletUpdateSerializer
         return serializer
 
     def create(self, request, *args, **kwargs):
-        serializer = self.serializer_class(data=request.data)
+        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save(owner=request.user)
 
@@ -88,18 +87,7 @@ class WalletViewSet(ModelViewSet):
     )  # FIXME: Define custom schema for TransactionGroupedSerializer
     @action(methods=["get", "post"], detail=True, url_path="expenses")
     def expenses(self, request, *args, **kwargs):
-        wallet = self.get_object()
-        if self.request.method == "POST":
-            if self.request.user == wallet.owner:
-                serializer = self._create_transaction(wallet, request.data)
-                return Response(serializer.data, status=HTTP_201_CREATED)
-            else:
-                raise NotOwnerError
-        elif self.request.method == "GET":
-            expenses = Transaction.objects.filter(is_expense=True, wallet=wallet)
-            return Response(
-                TransactionGroupedSerializer(instance=expenses).data, status=HTTP_200_OK
-            )
+        return self.evaulate_transaction(request, is_expense=True)
 
     @swagger_auto_schema(
         method="post",
@@ -111,22 +99,22 @@ class WalletViewSet(ModelViewSet):
     )  # FIXME: Define custom schema for TransactionGroupedSerializer
     @action(methods=["get", "post"], detail=True, url_path="income")
     def income(self, request, *args, **kwargs):
+        return self.evaulate_transaction(request, is_expense=False)
+
+    def evaulate_transaction(self, request, is_expense):
         wallet = self.get_object()
         if self.request.method == "POST":
-            if self.request.user == wallet.owner:
-                serializer = self._create_transaction(
-                    wallet, request.data, is_expense=False
-                )
-                return Response(serializer.data, status=HTTP_201_CREATED)
-            else:
+            if self.request.user != wallet.owner:
                 raise NotOwnerError
+            transaction = self._create_transaction(wallet, request.data, is_expense)
+            return Response(transaction.data, status=HTTP_201_CREATED)
         elif self.request.method == "GET":
-            income = Transaction.objects.filter(is_expense=False, wallet=wallet)
+            expenses = Transaction.objects.filter(is_expense=is_expense, wallet=wallet)
             return Response(
-                TransactionGroupedSerializer(instance=income).data, status=HTTP_200_OK
+                TransactionGroupedSerializer(instance=expenses).data, status=HTTP_200_OK
             )
 
-    def _create_transaction(self, wallet, data, is_expense=True):
+    def _create_transaction(self, wallet, data, is_expense):
         serializer = TransactionSerializer(data=data)
         serializer.is_valid(raise_exception=True)
         serializer.save(wallet=wallet, is_expense=is_expense)
