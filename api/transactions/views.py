@@ -1,5 +1,4 @@
 from django.db.models import Q
-from django.http import Http404
 
 from rest_framework.mixins import (
     DestroyModelMixin,
@@ -34,9 +33,3 @@ class TransactionViewSet(
                 .prefetch_related("wallet__participants")
             )
         return queryset
-
-    def get_object(self):
-        try:
-            return self.get_queryset().get(pk=self.kwargs["pk"])
-        except Transaction.DoesNotExist:
-            raise Http404
