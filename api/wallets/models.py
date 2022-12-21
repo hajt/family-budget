@@ -57,6 +57,7 @@ class Wallet(CommonModel):
         constraints = [
             models.UniqueConstraint(fields=["name", "owner"], name="unique_name_owner")
         ]
+        base_manager_name = "objects"
 
     def get_participants_display(self):
         return ", ".join([str(participant) for participant in self.participants.all()])
@@ -65,17 +66,37 @@ class Wallet(CommonModel):
 
     @property
     def income(self):
-        income = self._income if hasattr(self, "_income") else 0
+        income = (
+            self._income
+            if hasattr(self, "_income")
+            else sum(
+                self.transactions.filter(is_expense=True).values_list(
+                    "amount", flat=True
+                )
+            )
+        )
         return f"{income/100:.2f}"
 
     @property
     def expenses(self):
-        expenses = self._expenses if hasattr(self, "_expenses") else 0
+        expenses = (
+            self._expenses
+            if hasattr(self, "_expenses")
+            else sum(
+                self.transactions.filter(is_expense=False).values_list(
+                    "amount", flat=True
+                )
+            )
+        )
         return f"-{expenses/100:.2f}"
 
     @property
     def balance(self):
-        balance = self._balance if hasattr(self, "_balance") else 0
+        balance = (
+            self._balance
+            if hasattr(self, "_balance")
+            else (float(self.income) - float(self.expenses))
+        )
         return f"{balance/100:.2f}"
 
     def save(self, *args, **kwargs):
